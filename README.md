@@ -1,7 +1,7 @@
 # DigiCMR-API-Demo
 DigiCMR Api demo code
 
-The Xynaps platform facilitates authoring and issueing of the electronic consignment note. Our e-CMR implementation is conform the e-protocol and improves collaboration and communication between all involved parties.
+The Xynaps platform facilitates authoring and issueing of the electronic consignment note. Our e-CMR implementation is conform the UNECE e-protocol and improves collaboration and communication between all involved parties.
 
 The Xynaps API provides consignors, consignees, carriers and third-party software vendors to integrate their IT-systems into the e-CMR process. Our API provides functionality for:
 
