@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Xynaps.Api.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Xynaps.Api.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CollaborationScope">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="User" />
+      <xs:enumeration value="Organisation" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CollaborationScope" nillable="true" type="tns:CollaborationScope" />
+  <xs:simpleType name="CreationState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Pickup" />
+      <xs:enumeration value="Delivery" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CreationState" nillable="true" type="tns:CreationState" />
+  <xs:simpleType name="State">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="New" />
+      <xs:enumeration value="Draft" />
+      <xs:enumeration value="Issued" />
+      <xs:enumeration value="SignedForPickup" />
+      <xs:enumeration value="SignedForDelivery" />
+      <xs:enumeration value="Completed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="State" nillable="true" type="tns:State" />
+  <xs:simpleType name="TransportOrderState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="New" />
+      <xs:enumeration value="Started" />
+      <xs:enumeration value="ArrivedAtPickup" />
+      <xs:enumeration value="Loading" />
+      <xs:enumeration value="Loaded" />
+      <xs:enumeration value="ArrivedAtDelivery" />
+      <xs:enumeration value="Unloading" />
+      <xs:enumeration value="Unloaded" />
+      <xs:enumeration value="Completed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TransportOrderState" nillable="true" type="tns:TransportOrderState" />
+</xs:schema>

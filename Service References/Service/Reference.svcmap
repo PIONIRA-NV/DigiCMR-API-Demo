@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="48330998-a06b-4e39-967c-ad91e8133afa" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost/ws/v2/transportdocumentservice.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TransportDocumentService1.disco" MetadataType="Disco" ID="797813fb-8ac3-4e45-80c7-627682dad53a" SourceId="1" SourceUrl="https://localhost/ws/v2/TransportDocumentService.svc?disco" />
+    <MetadataFile FileName="TransportDocumentService2.wsdl" MetadataType="Wsdl" ID="77c0e973-754e-4eff-8636-73e568d363b4" SourceId="1" SourceUrl="https://localhost/ws/v2/TransportDocumentService.svc?wsdl" />
+    <MetadataFile FileName="TransportDocumentService4.xsd" MetadataType="Schema" ID="6b120770-6b8a-4086-9fce-548ec2cbda77" SourceId="1" SourceUrl="https://localhost/ws/v2/TransportDocumentService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TransportDocumentService41.xsd" MetadataType="Schema" ID="b5ef44a0-fb79-4577-8dd4-298be86c17f2" SourceId="1" SourceUrl="https://localhost/ws/v2/TransportDocumentService.svc?xsd=xsd3" />
+    <MetadataFile FileName="TransportDocumentService42.xsd" MetadataType="Schema" ID="3d664597-1087-4302-a83c-a95a4b9ec81c" SourceId="1" SourceUrl="https://localhost/ws/v2/TransportDocumentService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TransportDocumentService43.xsd" MetadataType="Schema" ID="95b52327-dca6-47d4-afa6-b300650fadce" SourceId="1" SourceUrl="https://localhost/ws/v2/TransportDocumentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TransportDocumentService21.wsdl" MetadataType="Wsdl" ID="39910565-8272-4e13-a6d7-eb8a2c0ebd99" SourceId="1" SourceUrl="https://localhost/ws/v2/TransportDocumentService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

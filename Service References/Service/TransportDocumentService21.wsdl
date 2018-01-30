@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="https://www.pionira.be/api/v2" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.pionira.be/api/v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://www.pionira.be/api/v2/Imports">
+      <xsd:import schemaLocation="https://localhost/ws/v2/TransportDocumentService.svc?xsd=xsd0" namespace="https://www.pionira.be/api/v2" />
+      <xsd:import schemaLocation="https://localhost/ws/v2/TransportDocumentService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://localhost/ws/v2/TransportDocumentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Xynaps.Api.Models" />
+      <xsd:import schemaLocation="https://localhost/ws/v2/TransportDocumentService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITransportDocumentService_CreateTransportDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTransportDocument" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_CreateTransportDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTransportDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_ProcessDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessDocument" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_ProcessDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_CreateTransportDocumentAttachments_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTransportDocumentAttachments" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_CreateTransportDocumentAttachments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTransportDocumentAttachmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentAttachments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentAttachments" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentAttachments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentAttachmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentAttachment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentAttachment" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentAttachment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentByExternalId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentByExternalId" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentByExternalId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentByExternalIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentById" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentAsPdf_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentAsPdf" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentAsPdf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentAsPdfResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentStateByIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentStateByIds" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentStateByIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentStateByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentStateSince_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentStateSince" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentStateSince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentStateSinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentStateHistoryByIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentStateHistoryByIds" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentStateHistoryByIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentStateHistoryByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentStateHistorySince_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentStateHistorySince" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_GetTransportDocumentStateHistorySince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransportDocumentStateHistorySinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_IssueTransportDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:IssueTransportDocument" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_IssueTransportDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IssueTransportDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_PrintTransportDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintTransportDocument" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_PrintTransportDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintTransportDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_UpdateTransportDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransportDocument" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_UpdateTransportDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransportDocumentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITransportDocumentService">
+    <wsdl:operation name="CreateTransportDocument">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/CreateTransportDocument" message="tns:ITransportDocumentService_CreateTransportDocument_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/CreateTransportDocumentResponse" message="tns:ITransportDocumentService_CreateTransportDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDocument">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/ProcessDocument" message="tns:ITransportDocumentService_ProcessDocument_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/ProcessDocumentResponse" message="tns:ITransportDocumentService_ProcessDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTransportDocumentAttachments">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/CreateTransportDocumentAttachments" message="tns:ITransportDocumentService_CreateTransportDocumentAttachments_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/CreateTransportDocumentAttachmentsResponse" message="tns:ITransportDocumentService_CreateTransportDocumentAttachments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransportDocumentAttachments">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentAttachments" message="tns:ITransportDocumentService_GetTransportDocumentAttachments_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentAttachmentsResponse" message="tns:ITransportDocumentService_GetTransportDocumentAttachments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransportDocumentAttachment">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentAttachment" message="tns:ITransportDocumentService_GetTransportDocumentAttachment_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentAttachmentResponse" message="tns:ITransportDocumentService_GetTransportDocumentAttachment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransportDocumentByExternalId">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentByExternalId" message="tns:ITransportDocumentService_GetTransportDocumentByExternalId_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentByExternalIdResponse" message="tns:ITransportDocumentService_GetTransportDocumentByExternalId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransportDocumentById">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentById" message="tns:ITransportDocumentService_GetTransportDocumentById_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentByIdResponse" message="tns:ITransportDocumentService_GetTransportDocumentById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransportDocumentAsPdf">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentAsPdf" message="tns:ITransportDocumentService_GetTransportDocumentAsPdf_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentAsPdfResponse" message="tns:ITransportDocumentService_GetTransportDocumentAsPdf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransportDocuments">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocuments" message="tns:ITransportDocumentService_GetTransportDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentsResponse" message="tns:ITransportDocumentService_GetTransportDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransportDocumentStateByIds">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentStateByIds" message="tns:ITransportDocumentService_GetTransportDocumentStateByIds_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentStateByIdsResponse" message="tns:ITransportDocumentService_GetTransportDocumentStateByIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransportDocumentStateSince">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentStateSince" message="tns:ITransportDocumentService_GetTransportDocumentStateSince_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentStateSinceResponse" message="tns:ITransportDocumentService_GetTransportDocumentStateSince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransportDocumentStateHistoryByIds">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentStateHistoryByIds" message="tns:ITransportDocumentService_GetTransportDocumentStateHistoryByIds_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentStateHistoryByIdsResponse" message="tns:ITransportDocumentService_GetTransportDocumentStateHistoryByIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransportDocumentStateHistorySince">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentStateHistorySince" message="tns:ITransportDocumentService_GetTransportDocumentStateHistorySince_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/GetTransportDocumentStateHistorySinceResponse" message="tns:ITransportDocumentService_GetTransportDocumentStateHistorySince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IssueTransportDocument">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/IssueTransportDocument" message="tns:ITransportDocumentService_IssueTransportDocument_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/IssueTransportDocumentResponse" message="tns:ITransportDocumentService_IssueTransportDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintTransportDocument">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/PrintTransportDocument" message="tns:ITransportDocumentService_PrintTransportDocument_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/PrintTransportDocumentResponse" message="tns:ITransportDocumentService_PrintTransportDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransportDocument">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/UpdateTransportDocument" message="tns:ITransportDocumentService_UpdateTransportDocument_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/UpdateTransportDocumentResponse" message="tns:ITransportDocumentService_UpdateTransportDocument_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

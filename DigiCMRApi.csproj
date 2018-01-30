@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3117AE5C-B921-45AF-900C-F1EBD6B8DEDD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DigiCMRApi</RootNamespace>
+    <AssemblyName>DigiCMRApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsoleApp.cs" />
+    <Compile Include="DataModels\Address.cs" />
+    <Compile Include="DataModels\Address.generated.cs" />
+    <Compile Include="DataModels\Carrier.cs" />
+    <Compile Include="DataModels\Carrier.generated.cs" />
+    <Compile Include="DataModels\CollaborationScope.cs" />
+    <Compile Include="DataModels\CollaborationSettings.cs" />
+    <Compile Include="DataModels\CollaborationSettings.generated.cs" />
+    <Compile Include="DataModels\Contact.cs" />
+    <Compile Include="DataModels\Contact.generated.cs" />
+    <Compile Include="DataModels\ContactReference.cs" />
+    <Compile Include="DataModels\ContactReference.generated.cs" />
+    <Compile Include="DataModels\CreationState.cs" />
+    <Compile Include="DataModels\CurrencyAmount.cs" />
+    <Compile Include="DataModels\CurrencyAmount.generated.cs" />
+    <Compile Include="DataModels\DangerousGood.cs" />
+    <Compile Include="DataModels\DangerousGood.generated.cs" />
+    <Compile Include="DataModels\Destination.cs" />
+    <Compile Include="DataModels\Destination.generated.cs" />
+    <Compile Include="DataModels\DocumentProperties.cs" />
+    <Compile Include="DataModels\DocumentProperties.generated.cs" />
+    <Compile Include="DataModels\Driver.cs" />
+    <Compile Include="DataModels\Driver.generated.cs" />
+    <Compile Include="DataModels\EmptiesItem.cs" />
+    <Compile Include="DataModels\EmptiesItem.generated.cs" />
+    <Compile Include="DataModels\EmptiesItemUpdate.cs" />
+    <Compile Include="DataModels\EmptiesItemUpdate.generated.cs" />
+    <Compile Include="DataModels\EntityState.cs" />
+    <Compile Include="DataModels\ErrorMessage.cs" />
+    <Compile Include="DataModels\ErrorMessage.generated.cs" />
+    <Compile Include="DataModels\ExternalReference.cs" />
+    <Compile Include="DataModels\ExternalReference.generated.cs" />
+    <Compile Include="DataModels\OperationResponse.cs" />
+    <Compile Include="DataModels\OperationResponse.generated.cs" />
+    <Compile Include="DataModels\Organisation.cs" />
+    <Compile Include="DataModels\Organisation.generated.cs" />
+    <Compile Include="DataModels\Package.cs" />
+    <Compile Include="DataModels\Package.generated.cs" />
+    <Compile Include="DataModels\Product.cs" />
+    <Compile Include="DataModels\Product.generated.cs" />
+    <Compile Include="DataModels\ProductUpdate.cs" />
+    <Compile Include="DataModels\ProductUpdate.generated.cs" />
+    <Compile Include="DataModels\RelatedContact.cs" />
+    <Compile Include="DataModels\RelatedContact.generated.cs" />
+    <Compile Include="DataModels\SignOffState.cs" />
+    <Compile Include="DataModels\State.cs" />
+    <Compile Include="DataModels\TransportDocument.cs" />
+    <Compile Include="DataModels\TransportDocument.generated.cs" />
+    <Compile Include="DataModels\TransportDocumentAnnotations.cs" />
+    <Compile Include="DataModels\TransportDocumentAnnotations.generated.cs" />
+    <Compile Include="DataModels\TransportDocumentAttachment.cs" />
+    <Compile Include="DataModels\TransportDocumentAttachment.generated.cs">
+      <DependentUpon>TransportDocumentAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModels\TransportDocumentAttachmentUpdate.cs" />
+    <Compile Include="DataModels\TransportDocumentAttachmentUpdate.generated.cs" />
+    <Compile Include="DataModels\TransportDocumentComment.cs" />
+    <Compile Include="DataModels\TransportDocumentComment.generated.cs" />
+    <Compile Include="DataModels\TransportDocumentReturnState.cs" />
+    <Compile Include="DataModels\TransportDocumentReturnState.generated.cs" />
+    <Compile Include="DataModels\TransportdocumentsAttachmentsResponse.cs" />
+    <Compile Include="DataModels\TransportdocumentsAttachmentsResponse.generated.cs" />
+    <Compile Include="DataModels\TransportdocumentsIdAttachmentsPostOKResponseContent.cs" />
+    <Compile Include="DataModels\TransportdocumentsIdAttachmentsPostOKResponseContent.generated.cs" />
+    <Compile Include="DataModels\TransportDocumentState.cs" />
+    <Compile Include="DataModels\TransportDocumentUpdate.cs" />
+    <Compile Include="DataModels\TransportDocumentWaitTimes.cs" />
+    <Compile Include="DataModels\TransportExecution.cs" />
+    <Compile Include="DataModels\TransportExecution.generated.cs" />
+    <Compile Include="DataModels\TransportOrderState.cs" />
+    <Compile Include="DataModels\Vehicle.cs" />
+    <Compile Include="DataModels\Vehicle.generated.cs" />
+    <Compile Include="DataModels\VerifiedGrossMass.cs" />
+    <Compile Include="DataModels\VerifiedGrossMass.generated.cs" />
+    <Compile Include="DataModels\Volume.cs" />
+    <Compile Include="DataModels\Volume.generated.cs" />
+    <Compile Include="DataModels\Weight.cs" />
+    <Compile Include="DataModels\Weight.generated.cs" />
+    <Compile Include="DataModels\WorkflowState.cs" />
+    <Compile Include="Diagnostics\Tracing.cs" />
+    <Compile Include="Diagnostics\Tracing.Designer.cs">
+      <DependentUpon>Tracing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DigiCMRApiDemo.cs" />
+    <Compile Include="Http\OAuth2Settings.cs" />
+    <Compile Include="Http\OAuthHttpClient.cs" />
+    <Compile Include="Http\TokenCache.cs" />
+    <Compile Include="Http\TokenResponse.cs" />
+    <Compile Include="IDigiCMRApiDemo.cs" />
+    <Compile Include="MenuAction.cs" />
+    <Compile Include="RestApiClient.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\Service\DigiCMRApi.Service.TransportDocument.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\DigiCMRApi.Service.TransportDocumentAttachment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\DigiCMRApi.Service.TransportDocumentReturnState.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\DigiCMRApi.Service.TransportdocumentsIdAttachmentsPostOKResponseContent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Service\TransportDocumentService2.wsdl" />
+    <None Include="Service References\Service\TransportDocumentService21.wsdl" />
+    <None Include="Service References\Service\TransportDocumentService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service\TransportDocumentService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service\TransportDocumentService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service\TransportDocumentService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="SoapApiClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Service\TransportDocumentService1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
