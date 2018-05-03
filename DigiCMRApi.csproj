@@ -168,21 +168,21 @@
     <None Include="Service References\Service\DigiCMRApi.Service.TransportdocumentsIdAttachmentsPostOKResponseContent.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Service\TransportDocumentService2.wsdl" />
-    <None Include="Service References\Service\TransportDocumentService21.wsdl" />
-    <None Include="Service References\Service\TransportDocumentService4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Service\TransportDocumentService41.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Service\TransportDocumentService42.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Service\TransportDocumentService43.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Compile Include="SoapApiClient.cs" />
+    <None Include="Service References\Service\TransportDocumentService.wsdl" />
+    <None Include="Service References\Service\TransportDocumentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service\TransportDocumentService1.wsdl" />
+    <None Include="Service References\Service\TransportDocumentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service\TransportDocumentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service\TransportDocumentService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -203,7 +203,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Service\TransportDocumentService1.disco" />
+    <None Include="Service References\Service\TransportDocumentService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

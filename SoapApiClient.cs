@@ -26,11 +26,11 @@ namespace DigiCMRApi
         /// <summary>
         /// Initializes a new instance of the <see cref="DigiCMRApiDemo" /> class.
         /// </summary>
-        public SoapApiDemo()
+        public SoapApiDemo(string userName, string password)
         {
             this.soapClient = new Service.TransportDocumentServiceClient("BasicHttpsBinding_ITransportDocumentService");
-            this.soapClient.ClientCredentials.UserName.UserName = "";
-            this.soapClient.ClientCredentials.UserName.Password = "";
+            this.soapClient.ClientCredentials.UserName.UserName = userName;
+            this.soapClient.ClientCredentials.UserName.Password = password;
         }
 
         /// <summary>
@@ -47,7 +47,22 @@ namespace DigiCMRApi
                 DossierNumber = dossierNumber,
                 ExternalId = externalId,
                 IssuedDate = DateTime.Today,
+                IssuedPlace = "Zeebrugge",
                 Consignor = new Contact
+                {
+                    ExternalId = "14-14",
+                    Name = "ACME Bakeries",
+                    EmailAddress = "info@acmebakeries.tst",
+                    Address = new Address
+                    {
+                        StreetAddress = "Baron de Maerelaan 8",
+                        City = "Zeebrugge",
+                        Postalcode = "8380",
+                    },
+                    // Use the signature text to provide the information to put into field 14 of the CMR
+                    SignatureText = "ACME Bakeries"
+                },
+                Pickup = new Destination
                 {
                     ExternalId = "14-14",
                     Name = "ACME Bakeries",
@@ -57,6 +72,7 @@ namespace DigiCMRApi
                         City = "Zeebrugge",
                         Postalcode = "8380",
                     },
+                    Datetime = DateTime.Now.AddDays(1),
                     // Use the signature text to provide the information to put into field 14 of the CMR
                     SignatureText = "ACME Bakeries"
                 },
@@ -76,6 +92,18 @@ namespace DigiCMRApi
                 },
                 Consignee = new Contact
                 {
+                    ExternalId = "15-15",
+                    Name = "ACME Warehouse",
+                    Address = new Address
+                    {
+                        StreetAddress = "Baron de Maerelaan 8",
+                        City = "Gent",
+                        Postalcode = "9000"
+                    }
+                },
+                Delivery = new Destination
+                {
+                    Datetime = DateTime.Now.AddDays(2),
                     ExternalId = "15-15",
                     Name = "ACME Warehouse",
                     Address = new Address

@@ -39,11 +39,19 @@ namespace DigiCMRApi
             {
                 if (choice == 1)
                 {
-                    this.apiDemo = new SoapApiDemo();
+                    Console.Write("Connection key :");
+                    var connectionKey = Console.ReadLine();
+                    Console.Write("Connection secret :");
+                    var connectionSecret = Console.ReadLine();
+                    this.apiDemo = new SoapApiDemo(connectionKey, connectionSecret);
                 }
                 else
                 {
-                    this.apiDemo = new RestApiDemo();
+                    Console.Write("Client Id :");
+                    var clientId = Console.ReadLine();
+                    Console.Write("Client secret :");
+                    var clientSecret = Console.ReadLine();
+                    this.apiDemo = new RestApiDemo(clientId, clientSecret);
                 }
 
                 ConsoleApp.MenuActions = new Collection<MenuAction>

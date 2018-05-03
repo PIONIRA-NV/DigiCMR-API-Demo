@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="FZeOXfnSABTssPG20A3Ose2HDdM=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="y1C60E3F02RM5C6uwA1N8VMXm8o=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpsBinding_ITransportDocumentService">
       <properties>
@@ -221,10 +221,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpsBinding_ITransportDocumentService" contract="Service.ITransportDocumentService" bindingType="basicHttpBinding" address="https://localhost/ws/v2/TransportDocumentService.svc/upwd" bindingConfiguration="BasicHttpsBinding_ITransportDocumentService">
+    <endpoint name="BasicHttpsBinding_ITransportDocumentService" contract="Service.ITransportDocumentService" bindingType="basicHttpBinding" address="https://apps.xynaps.net/ws/v2/TransportDocumentService.svc/upwd" bindingConfiguration="BasicHttpsBinding_ITransportDocumentService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://localhost/ws/v2/TransportDocumentService.svc/upwd</serializedValue>
+          <serializedValue>https://apps.xynaps.net/ws/v2/TransportDocumentService.svc/upwd</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -306,10 +306,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpsBinding_ITransportDocumentService1" contract="Service.ITransportDocumentService" bindingType="basicHttpBinding" address="https://localhost/ws/v2/TransportDocumentService.svc/cert" bindingConfiguration="BasicHttpsBinding_ITransportDocumentService1">
+    <endpoint name="BasicHttpsBinding_ITransportDocumentService1" contract="Service.ITransportDocumentService" bindingType="basicHttpBinding" address="https://apps.xynaps.net/ws/v2/TransportDocumentService.svc/cert" bindingConfiguration="BasicHttpsBinding_ITransportDocumentService1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://localhost/ws/v2/TransportDocumentService.svc/cert</serializedValue>
+          <serializedValue>https://apps.xynaps.net/ws/v2/TransportDocumentService.svc/cert</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Program.cs" company="PIONIRA NV">
+// <copyright file="RestApiDemo.cs" company="PIONIRA NV">
 //     Copyright (c) PIONIRA NV. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -35,13 +35,13 @@ namespace DigiCMRApi
         /// <summary>
         /// Initializes a new instance of the <see cref="RestApiDemo" /> class.
         /// </summary>
-        public RestApiDemo()
+        public RestApiDemo(string clientId, string clientSecret)
         {
             this.oauthSettings = new OAuth2Settings
             {
-                ClientId = "",
-                ClientSecret = "",
-                AccessTokenUrl = "https://apps.xynaps.net/api/v1/oauth2/token",
+                ClientId = clientId,
+                ClientSecret = clientSecret,
+                AccessTokenUrl = "https://apps.xynapos.net/api/v1/oauth2/token",
                 BaseUrl = "https://apps.xynaps.net/"
             };
 
@@ -121,14 +121,24 @@ namespace DigiCMRApi
                         },
                     }
                 },
-                GoodsText = "2 pal. bruin brood",
+                //GoodsText = "2 pal. bruin brood",
                 Goods = new Product[]
                 {
                     new Product
                     {
                         Code = "Code",
+                        Description = "u",
+                        LotNumber = "-",
+                        Quantity = 5,
+                        Reference = "8",
                         SealNumber = "Sealnr",
                         ExternalId = "4646",
+                    },
+                    new Product
+                    {
+                        Code = "Code2",
+                        SealNumber = "Sealnr",
+                        ExternalId = "422646",
                     }
                 },
                 ECmr = true

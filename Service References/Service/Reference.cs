@@ -2274,6 +2274,9 @@ namespace DigiCMRApi.Service {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Completed = 6,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Cancelled = 8,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3206,55 +3209,13 @@ namespace DigiCMRApi.Service {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ErrorMessage", Namespace="https://www.pionira.be/api/v2")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.CollaborationScope))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.CreationState))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.State))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportOrderState))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.Dictionary<string, string>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(long[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportDocument))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportDocumentAttachment[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportDocumentAttachment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.ContactReference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Contact))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Address))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.CollaborationSettings))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.RelatedContact[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.RelatedContact))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.DangerousGood[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.DangerousGood))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Destination))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.EmptiesItem[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.EmptiesItem))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.ExternalReference[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.ExternalReference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Product[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Product))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Package[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Package))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Carrier))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.DocumentProperties))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.CurrencyAmount))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportDocumentComment[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportDocumentComment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Carrier[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportExecution[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportExecution))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Driver))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Vehicle))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Weight))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.Volume))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportDocumentReturnState))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportdocumentsIdAttachmentsPostOKResponseContent))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportDocument[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportDocumentReturnState[]))]
     public partial class ErrorMessage : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private object DetailsField;
+        private System.Collections.Generic.Dictionary<string, string[]> DetailsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MessageField;
@@ -3270,7 +3231,7 @@ namespace DigiCMRApi.Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public object Details {
+        public System.Collections.Generic.Dictionary<string, string[]> Details {
             get {
                 return this.DetailsField;
             }
