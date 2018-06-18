@@ -6,11 +6,8 @@
 
 namespace DigiCMRApi
 {
-    using Service;
     using System;
     using System.Collections.ObjectModel;
-    using System.Diagnostics;
-    using System.IO;
 
     /// <summary>
     /// Class DigiCMRApiDemo.

@@ -48,5 +48,9 @@ namespace Xynaps.Api.Models
         /// </summary>
         Completed = 6,
 
+        /// <summary>
+        /// The document was cancelled
+        /// </summary>
+        Cancelled = 8
     }
 }

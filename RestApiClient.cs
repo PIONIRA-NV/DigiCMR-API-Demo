@@ -41,7 +41,7 @@ namespace DigiCMRApi
             {
                 ClientId = clientId,
                 ClientSecret = clientSecret,
-                AccessTokenUrl = "https://apps.xynapos.net/api/v1/oauth2/token",
+                AccessTokenUrl = "https://apps.xynaps.net/api/v1/oauth2/token",
                 BaseUrl = "https://apps.xynaps.net/"
             };
 

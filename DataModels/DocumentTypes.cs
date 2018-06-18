@@ -1,21 +1,32 @@
 //-----------------------------------------------------------------------
-// <copyright file="Contact.cs" company="PIONIRA NV">
+// <copyright file="DocumentTypes.cs" company="PIONIRA NV">
 //     Copyright (c) PIONIRA NV. All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
 
 namespace Xynaps.Api.Models
 {
+    using System;
+
     /// <summary>
-    ///
+    /// 
     /// </summary>
-    public partial class Contact : IContact
+    public enum DocumentTypes
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Contact"/> class.
+        /// None.
         /// </summary>
-        public Contact()
-        {
-        }
+        None = 0,
+
+        /// <summary>
+        /// CMR
+        /// </summary>
+        CMR = 1,
+
+        /// <summary>
+        /// IDF
+        /// </summary>
+        IDF = 2,
+
     }
 }

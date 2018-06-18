@@ -110,7 +110,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("externalReferences", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<ExternalReference> ExternalReferences { get; set; }
+        public ExternalReference[] ExternalReferences { get; set; }
 
         /// <summary>
         /// Gets or sets the IssuedDate.
@@ -230,7 +230,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("successiveCarriers", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<Carrier> SuccessiveCarriers { get; set; }
+        public Carrier[] SuccessiveCarriers { get; set; }
 
         /// <summary>
         /// Gets or sets the GoodsText.
@@ -274,7 +274,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("goods", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<Product> Goods { get; set; }
+        public Product[] Goods { get; set; }
 
         /// <summary>
         /// Gets or sets the DangerousGoods.
@@ -285,7 +285,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("dangerousGoods", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<DangerousGood> DangerousGoods { get; set; }
+        public DangerousGood[] DangerousGoods { get; set; }
 
         /// <summary>
         /// Gets or sets the TransportationCosts.
@@ -360,7 +360,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("attachments", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<TransportDocumentAttachment> Attachments { get; set; }
+        public TransportDocumentAttachment[] Attachments { get; set; }
 
         /// <summary>
         /// Gets or sets the Empties.
@@ -371,7 +371,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("empties", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<EmptiesItem> Empties { get; set; }
+        public EmptiesItem[] Empties { get; set; }
 
         /// <summary>
         /// Gets or sets the Contacts.
@@ -382,7 +382,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("contacts", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<RelatedContact> Contacts { get; set; }
+        public RelatedContact[] Contacts { get; set; }
 
         /// <summary>
         /// Gets or sets the Reservations.
@@ -394,7 +394,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("reservations", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<TransportDocumentComment> Reservations { get; set; }
+        public TransportDocumentComment[] Reservations { get; set; }
 
         /// <summary>
         /// Gets or sets the TransportExecutions.
@@ -406,7 +406,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("transportExecutions", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<TransportExecution> TransportExecutions { get; set; }
+        public TransportExecution[] TransportExecutions { get; set; }
 
         /// <summary>
         /// Gets or sets the ECmr.

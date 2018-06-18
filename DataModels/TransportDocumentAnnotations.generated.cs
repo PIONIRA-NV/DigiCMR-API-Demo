@@ -51,9 +51,9 @@ namespace Xynaps.Api.Models
         /// <value>
         /// The TransportDocumentAttachments.
         /// </value>
-        [JsonProperty("transportDocumentAttachments", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("attachments", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<TransportDocumentAttachmentUpdate> TransportDocumentAttachments { get; set; }
+        public TransportDocumentAttachmentUpdate[] TransportDocumentAttachments { get; set; }
 
         /// <summary>
         /// Gets or sets the Empties.
@@ -63,7 +63,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("empties", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<EmptiesItemUpdate> Empties { get; set; }
+        public EmptiesItemUpdate[] Empties { get; set; }
 
         /// <summary>
         /// Gets or sets the ContactId.
@@ -83,7 +83,17 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("goods", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<ProductUpdate> Goods { get; set; }
+        public ProductUpdate[] Goods { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Goods.
+        /// </summary>
+        /// <value>
+        /// The Goods.
+        /// </value>
+        [JsonProperty("goodsText", NullValueHandling = NullValueHandling.Ignore)]
+        [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        public string GoodsText { get; set; }
 
         /// <summary>
         /// Gets or sets the Pickup.
@@ -145,7 +155,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("transportExecutions", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public IList<TransportExecution> TransportExecutions { get; set; }
+        public TransportExecution[] TransportExecutions { get; set; }
 
     }
 }

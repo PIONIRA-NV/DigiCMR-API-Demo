@@ -32,6 +32,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public long? Id { get; set; }
 
         /// <summary>
@@ -44,6 +45,7 @@ namespace Xynaps.Api.Models
         [Required]
         [JsonProperty("externalId")]
         [DataMember]
+        [XmlElement]
         public string ExternalId { get; set; }
 
         /// <summary>
@@ -55,6 +57,7 @@ namespace Xynaps.Api.Models
         [Required]
         [JsonProperty("name")]
         [DataMember]
+        [XmlElement]
         public string Name { get; set; }
 
         /// <summary>
@@ -66,6 +69,7 @@ namespace Xynaps.Api.Models
         [Required]
         [JsonProperty("address")]
         [DataMember]
+        [XmlElement]
         public Address Address { get; set; }
 
         /// <summary>
@@ -76,6 +80,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("emailAddress", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public string EmailAddress { get; set; }
 
         /// <summary>
@@ -86,6 +91,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("mobileNumber", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public string MobileNumber { get; set; }
 
         /// <summary>
@@ -96,6 +102,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("telephoneNumber", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public string TelephoneNumber { get; set; }
 
         /// <summary>
@@ -107,6 +114,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("organizationNumber", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public string OrganizationNumber { get; set; }
 
         /// <summary>
@@ -118,6 +126,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("text", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public string Text { get; set; }
 
         /// <summary>
@@ -129,6 +138,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("collaborationSettings", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public CollaborationSettings CollaborationSettings { get; set; }
 
         /// <summary>
@@ -140,6 +150,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("signatureText", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public string SignatureText { get; set; }
 
         /// <summary>
@@ -151,6 +162,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("signatureImage", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public string SignatureImage { get; set; }
 
         /// <summary>
@@ -162,6 +174,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("signatureName", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public string SignatureName { get; set; }
 
         /// <summary>
@@ -170,6 +183,7 @@ namespace Xynaps.Api.Models
         /// <value>The signature date.</value>
         [JsonProperty("SignatureDate", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public DateTime? SignatureDate { get; set; }
     }
 }

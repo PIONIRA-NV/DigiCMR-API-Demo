@@ -75,6 +75,7 @@
     <Compile Include="DataModels\Destination.generated.cs" />
     <Compile Include="DataModels\DocumentProperties.cs" />
     <Compile Include="DataModels\DocumentProperties.generated.cs" />
+    <Compile Include="DataModels\DocumentTypes.cs" />
     <Compile Include="DataModels\Driver.cs" />
     <Compile Include="DataModels\Driver.generated.cs" />
     <Compile Include="DataModels\EmptiesItem.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="DataModels\ErrorMessage.generated.cs" />
     <Compile Include="DataModels\ExternalReference.cs" />
     <Compile Include="DataModels\ExternalReference.generated.cs" />
+    <Compile Include="DataModels\IContact.cs" />
     <Compile Include="DataModels\OperationResponse.cs" />
     <Compile Include="DataModels\OperationResponse.generated.cs" />
     <Compile Include="DataModels\Organisation.cs" />

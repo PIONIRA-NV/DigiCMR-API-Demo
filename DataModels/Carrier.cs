@@ -7,7 +7,10 @@
 namespace Xynaps.Api.Models
 {
     using Newtonsoft.Json;
+    using System;
+    using System.ComponentModel.DataAnnotations;
     using System.Runtime.Serialization;
+    using System.Xml.Serialization;
 
     /// <summary>
     ///

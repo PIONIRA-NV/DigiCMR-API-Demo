@@ -32,6 +32,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("datetime", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public DateTime? Datetime { get; set; }
 
         /// <summary>
@@ -43,6 +44,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("arrival", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public DateTime? Arrival { get; set; }
 
         /// <summary>
@@ -54,6 +56,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("departure", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public DateTime? Departure { get; set; }
 
         /// <summary>
@@ -64,6 +67,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("reference", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public string Reference { get; set; }
 
         /// <summary>
@@ -74,6 +78,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("remarks", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        [XmlElement]
         public string Remarks { get; set; }
 
     }

@@ -41,7 +41,7 @@ namespace Xynaps.Api.Models
         /// </value>
         [JsonProperty("details", NullValueHandling = NullValueHandling.Ignore)]
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public object Details { get; set; }
+        public Dictionary<string, string[]> Details { get; set; }
 
     }
 }

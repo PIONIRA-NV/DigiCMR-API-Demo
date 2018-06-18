@@ -69,6 +69,17 @@ namespace Xynaps.Api.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// Gets or sets the Location.
+        /// </summary>
+        /// <value>
+        /// The location.
+        /// </value>
+        [JsonProperty("location")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        public CreationState Location { get; set; }
+
+        /// <summary>
         /// Gets or sets the QuantityDelivered.
         /// </summary>
         /// <value>
