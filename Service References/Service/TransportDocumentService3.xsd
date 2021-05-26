@@ -14,9 +14,21 @@
       <xs:enumeration value="None" />
       <xs:enumeration value="Pickup" />
       <xs:enumeration value="Delivery" />
+      <xs:enumeration value="TransferPickup" />
+      <xs:enumeration value="TransferDelivery" />
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="CreationState" nillable="true" type="tns:CreationState" />
+  <xs:simpleType name="ProductState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Loaded" />
+      <xs:enumeration value="Delivered" />
+      <xs:enumeration value="Refused" />
+      <xs:enumeration value="Returned" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ProductState" nillable="true" type="tns:ProductState" />
   <xs:simpleType name="State">
     <xs:restriction base="xs:string">
       <xs:enumeration value="None" />
@@ -30,6 +42,13 @@
         <xs:annotation>
           <xs:appinfo>
             <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Deleted">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
           </xs:appinfo>
         </xs:annotation>
       </xs:enumeration>
@@ -48,6 +67,8 @@
       <xs:enumeration value="Unloading" />
       <xs:enumeration value="Unloaded" />
       <xs:enumeration value="Completed" />
+      <xs:enumeration value="TranshipmentPickup" />
+      <xs:enumeration value="TranshipmentDelivery" />
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="TransportOrderState" nillable="true" type="tns:TransportOrderState" />

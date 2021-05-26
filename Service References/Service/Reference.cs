@@ -56,10 +56,16 @@ namespace DigiCMRApi.Service {
         private DigiCMRApi.Service.RelatedContact[] ContactsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.DangerousGoodSummary DangerousGoodSummaryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private DigiCMRApi.Service.DangerousGood[] DangerousGoodsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private DigiCMRApi.Service.Destination DeliveryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.DocumentProperties[] DocumentsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DossierNumberField;
@@ -128,13 +134,25 @@ namespace DigiCMRApi.Service {
         private DigiCMRApi.Service.Carrier[] SuccessiveCarriersField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] TransitCountriesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.TransportEquipment[] TransportEquipmentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private DigiCMRApi.Service.TransportExecution[] TransportExecutionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private DigiCMRApi.Service.TransportOrderState TransportOrderStateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.TransportType TransportTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TransportationCostsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<string, string> WasteIdentificationField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -290,6 +308,19 @@ namespace DigiCMRApi.Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.DangerousGoodSummary DangerousGoodSummary {
+            get {
+                return this.DangerousGoodSummaryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DangerousGoodSummaryField, value) != true)) {
+                    this.DangerousGoodSummaryField = value;
+                    this.RaisePropertyChanged("DangerousGoodSummary");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public DigiCMRApi.Service.DangerousGood[] DangerousGoods {
             get {
                 return this.DangerousGoodsField;
@@ -311,6 +342,19 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.DeliveryField, value) != true)) {
                     this.DeliveryField = value;
                     this.RaisePropertyChanged("Delivery");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.DocumentProperties[] Documents {
+            get {
+                return this.DocumentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DocumentsField, value) != true)) {
+                    this.DocumentsField = value;
+                    this.RaisePropertyChanged("Documents");
                 }
             }
         }
@@ -602,6 +646,32 @@ namespace DigiCMRApi.Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string[] TransitCountries {
+            get {
+                return this.TransitCountriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TransitCountriesField, value) != true)) {
+                    this.TransitCountriesField = value;
+                    this.RaisePropertyChanged("TransitCountries");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.TransportEquipment[] TransportEquipment {
+            get {
+                return this.TransportEquipmentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TransportEquipmentField, value) != true)) {
+                    this.TransportEquipmentField = value;
+                    this.RaisePropertyChanged("TransportEquipment");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public DigiCMRApi.Service.TransportExecution[] TransportExecutions {
             get {
                 return this.TransportExecutionsField;
@@ -628,6 +698,19 @@ namespace DigiCMRApi.Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.TransportType TransportType {
+            get {
+                return this.TransportTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TransportTypeField, value) != true)) {
+                    this.TransportTypeField = value;
+                    this.RaisePropertyChanged("TransportType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string TransportationCosts {
             get {
                 return this.TransportationCostsField;
@@ -636,6 +719,19 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.TransportationCostsField, value) != true)) {
                     this.TransportationCostsField = value;
                     this.RaisePropertyChanged("TransportationCosts");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Collections.Generic.Dictionary<string, string> WasteIdentification {
+            get {
+                return this.WasteIdentificationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WasteIdentificationField, value) != true)) {
+                    this.WasteIdentificationField = value;
+                    this.RaisePropertyChanged("WasteIdentification");
                 }
             }
         }
@@ -736,7 +832,13 @@ namespace DigiCMRApi.Service {
         private string ExternalIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FaxNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<long> IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LicenseField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MobileNumberField;
@@ -746,6 +848,12 @@ namespace DigiCMRApi.Service {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string OrganizationNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<string, string> RegistrationNumbersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.ContactSummary ResponsibleContactField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> SignatureDateField;
@@ -828,6 +936,19 @@ namespace DigiCMRApi.Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string FaxNumber {
+            get {
+                return this.FaxNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FaxNumberField, value) != true)) {
+                    this.FaxNumberField = value;
+                    this.RaisePropertyChanged("FaxNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public System.Nullable<long> Id {
             get {
                 return this.IdField;
@@ -836,6 +957,19 @@ namespace DigiCMRApi.Service {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string License {
+            get {
+                return this.LicenseField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LicenseField, value) != true)) {
+                    this.LicenseField = value;
+                    this.RaisePropertyChanged("License");
                 }
             }
         }
@@ -853,7 +987,7 @@ namespace DigiCMRApi.Service {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string Name {
             get {
                 return this.NameField;
@@ -875,6 +1009,32 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.OrganizationNumberField, value) != true)) {
                     this.OrganizationNumberField = value;
                     this.RaisePropertyChanged("OrganizationNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Collections.Generic.Dictionary<string, string> RegistrationNumbers {
+            get {
+                return this.RegistrationNumbersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RegistrationNumbersField, value) != true)) {
+                    this.RegistrationNumbersField = value;
+                    this.RaisePropertyChanged("RegistrationNumbers");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.ContactSummary ResponsibleContact {
+            get {
+                return this.ResponsibleContactField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ResponsibleContactField, value) != true)) {
+                    this.ResponsibleContactField = value;
+                    this.RaisePropertyChanged("ResponsibleContact");
                 }
             }
         }
@@ -953,6 +1113,67 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.TextField, value) != true)) {
                     this.TextField = value;
                     this.RaisePropertyChanged("Text");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DangerousGoodSummary", Namespace="https://www.pionira.be/api/v2")]
+    [System.SerializableAttribute()]
+    public partial class DangerousGoodSummary : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MostRestrictiveTunnelCodesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RemarksField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string MostRestrictiveTunnelCodes {
+            get {
+                return this.MostRestrictiveTunnelCodesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MostRestrictiveTunnelCodesField, value) != true)) {
+                    this.MostRestrictiveTunnelCodesField = value;
+                    this.RaisePropertyChanged("MostRestrictiveTunnelCodes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Remarks {
+            get {
+                return this.RemarksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RemarksField, value) != true)) {
+                    this.RemarksField = value;
+                    this.RaisePropertyChanged("Remarks");
                 }
             }
         }
@@ -1061,7 +1282,7 @@ namespace DigiCMRApi.Service {
     public partial class Carrier : DigiCMRApi.Service.Contact {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LicenseField;
+        private bool IsSuccessiveCarrierField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LicensePlateField;
@@ -1070,14 +1291,14 @@ namespace DigiCMRApi.Service {
         private string TrailerLicensePlateField;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string License {
+        public bool IsSuccessiveCarrier {
             get {
-                return this.LicenseField;
+                return this.IsSuccessiveCarrierField;
             }
             set {
-                if ((object.ReferenceEquals(this.LicenseField, value) != true)) {
-                    this.LicenseField = value;
-                    this.RaisePropertyChanged("License");
+                if ((this.IsSuccessiveCarrierField.Equals(value) != true)) {
+                    this.IsSuccessiveCarrierField = value;
+                    this.RaisePropertyChanged("IsSuccessiveCarrier");
                 }
             }
         }
@@ -1122,6 +1343,9 @@ namespace DigiCMRApi.Service {
         private string CountryLayoutField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DocumentNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int DocumentTypeIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1149,6 +1373,19 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.CountryLayoutField, value) != true)) {
                     this.CountryLayoutField = value;
                     this.RaisePropertyChanged("CountryLayout");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DocumentNumber {
+            get {
+                return this.DocumentNumberField;
+            }
+            set {
+                if ((this.DocumentNumberField.Equals(value) != true)) {
+                    this.DocumentNumberField = value;
+                    this.RaisePropertyChanged("DocumentNumber");
                 }
             }
         }
@@ -1249,6 +1486,82 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.CurrencyField, value) != true)) {
                     this.CurrencyField = value;
                     this.RaisePropertyChanged("Currency");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TransportType", Namespace="https://www.pionira.be/api/v2")]
+    [System.SerializableAttribute()]
+    public partial class TransportType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private string CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
+        public string Code {
+            get {
+                return this.CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
+                    this.CodeField = value;
+                    this.RaisePropertyChanged("Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -1542,10 +1855,34 @@ namespace DigiCMRApi.Service {
         private string CodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EnvironmentallyHazardousField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HazardInitiatorsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LabelOrClassificationCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PackagingDangerLevelCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> PointsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string QuantityUnitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TechnicalNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TransportCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TunnelRestrictionCodesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1570,7 +1907,46 @@ namespace DigiCMRApi.Service {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string EnvironmentallyHazardous {
+            get {
+                return this.EnvironmentallyHazardousField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EnvironmentallyHazardousField, value) != true)) {
+                    this.EnvironmentallyHazardousField = value;
+                    this.RaisePropertyChanged("EnvironmentallyHazardous");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string HazardInitiators {
+            get {
+                return this.HazardInitiatorsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HazardInitiatorsField, value) != true)) {
+                    this.HazardInitiatorsField = value;
+                    this.RaisePropertyChanged("HazardInitiators");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string LabelOrClassificationCode {
+            get {
+                return this.LabelOrClassificationCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LabelOrClassificationCodeField, value) != true)) {
+                    this.LabelOrClassificationCodeField = value;
+                    this.RaisePropertyChanged("LabelOrClassificationCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string PackagingDangerLevelCode {
             get {
                 return this.PackagingDangerLevelCodeField;
@@ -1579,6 +1955,45 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.PackagingDangerLevelCodeField, value) != true)) {
                     this.PackagingDangerLevelCodeField = value;
                     this.RaisePropertyChanged("PackagingDangerLevelCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Nullable<decimal> Points {
+            get {
+                return this.PointsField;
+            }
+            set {
+                if ((this.PointsField.Equals(value) != true)) {
+                    this.PointsField = value;
+                    this.RaisePropertyChanged("Points");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Nullable<decimal> Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((this.QuantityField.Equals(value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string QuantityUnit {
+            get {
+                return this.QuantityUnitField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuantityUnitField, value) != true)) {
+                    this.QuantityUnitField = value;
+                    this.RaisePropertyChanged("QuantityUnit");
                 }
             }
         }
@@ -1592,6 +2007,32 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.TechnicalNameField, value) != true)) {
                     this.TechnicalNameField = value;
                     this.RaisePropertyChanged("TechnicalName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string TransportCategory {
+            get {
+                return this.TransportCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TransportCategoryField, value) != true)) {
+                    this.TransportCategoryField = value;
+                    this.RaisePropertyChanged("TransportCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string TunnelRestrictionCodes {
+            get {
+                return this.TunnelRestrictionCodesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TunnelRestrictionCodesField, value) != true)) {
+                    this.TunnelRestrictionCodesField = value;
+                    this.RaisePropertyChanged("TunnelRestrictionCodes");
                 }
             }
         }
@@ -1626,6 +2067,9 @@ namespace DigiCMRApi.Service {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<long> IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.CreationState LocationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int QuantityDeliveredField;
@@ -1691,6 +2135,19 @@ namespace DigiCMRApi.Service {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.CreationState Location {
+            get {
+                return this.LocationField;
+            }
+            set {
+                if ((this.LocationField.Equals(value) != true)) {
+                    this.LocationField = value;
+                    this.RaisePropertyChanged("Location");
                 }
             }
         }
@@ -1805,7 +2262,13 @@ namespace DigiCMRApi.Service {
         private string CodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.DangerousGood[] DangerousGoodsInfoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<string, string> ExternalAttributesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ExternalIdField;
@@ -1838,6 +2301,9 @@ namespace DigiCMRApi.Service {
         private DigiCMRApi.Service.Package[] PackagingDetailsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.ProductState ProductStateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int QuantityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1857,6 +2323,9 @@ namespace DigiCMRApi.Service {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string VolumeUnitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.WasteProductInformation WasteInfoField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1882,6 +2351,19 @@ namespace DigiCMRApi.Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.DangerousGood[] DangerousGoodsInfo {
+            get {
+                return this.DangerousGoodsInfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DangerousGoodsInfoField, value) != true)) {
+                    this.DangerousGoodsInfoField = value;
+                    this.RaisePropertyChanged("DangerousGoodsInfo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string Description {
             get {
                 return this.DescriptionField;
@@ -1890,6 +2372,19 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
                     this.DescriptionField = value;
                     this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Collections.Generic.Dictionary<string, string> ExternalAttributes {
+            get {
+                return this.ExternalAttributesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExternalAttributesField, value) != true)) {
+                    this.ExternalAttributesField = value;
+                    this.RaisePropertyChanged("ExternalAttributes");
                 }
             }
         }
@@ -2025,6 +2520,19 @@ namespace DigiCMRApi.Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public DigiCMRApi.Service.ProductState ProductState {
+            get {
+                return this.ProductStateField;
+            }
+            set {
+                if ((this.ProductStateField.Equals(value) != true)) {
+                    this.ProductStateField = value;
+                    this.RaisePropertyChanged("ProductState");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Quantity {
             get {
                 return this.QuantityField;
@@ -2115,6 +2623,19 @@ namespace DigiCMRApi.Service {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.WasteProductInformation WasteInfo {
+            get {
+                return this.WasteInfoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WasteInfoField, value) != true)) {
+                    this.WasteInfoField = value;
+                    this.RaisePropertyChanged("WasteInfo");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -2133,6 +2654,9 @@ namespace DigiCMRApi.Service {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private DigiCMRApi.Service.ContactReference ContactIdField;
@@ -2159,6 +2683,19 @@ namespace DigiCMRApi.Service {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Code {
+            get {
+                return this.CodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodeField, value) != true)) {
+                    this.CodeField = value;
+                    this.RaisePropertyChanged("Code");
+                }
             }
         }
         
@@ -2277,6 +2814,80 @@ namespace DigiCMRApi.Service {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Cancelled = 8,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Deleted = 10,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TransportEquipment", Namespace="https://www.pionira.be/api/v2")]
+    [System.SerializableAttribute()]
+    public partial class TransportEquipment : DigiCMRApi.Service.Entity {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.Seal[] AffixedSealsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.ExternalIdentifier[] EquipmentIdsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsReturnableField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.Seal[] AffixedSeals {
+            get {
+                return this.AffixedSealsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AffixedSealsField, value) != true)) {
+                    this.AffixedSealsField = value;
+                    this.RaisePropertyChanged("AffixedSeals");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.ExternalIdentifier[] EquipmentIds {
+            get {
+                return this.EquipmentIdsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EquipmentIdsField, value) != true)) {
+                    this.EquipmentIdsField = value;
+                    this.RaisePropertyChanged("EquipmentIds");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public bool IsReturnable {
+            get {
+                return this.IsReturnableField;
+            }
+            set {
+                if ((this.IsReturnableField.Equals(value) != true)) {
+                    this.IsReturnableField = value;
+                    this.RaisePropertyChanged("IsReturnable");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2290,6 +2901,9 @@ namespace DigiCMRApi.Service {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private DigiCMRApi.Service.Driver DriverField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsCompletedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private DigiCMRApi.Service.Vehicle TrailerField;
@@ -2316,6 +2930,19 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.DriverField, value) != true)) {
                     this.DriverField = value;
                     this.RaisePropertyChanged("Driver");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public bool IsCompleted {
+            get {
+                return this.IsCompletedField;
+            }
+            set {
+                if ((this.IsCompletedField.Equals(value) != true)) {
+                    this.IsCompletedField = value;
+                    this.RaisePropertyChanged("IsCompleted");
                 }
             }
         }
@@ -2389,6 +3016,12 @@ namespace DigiCMRApi.Service {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Completed = 9,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        TranshipmentPickup = 10,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        TranshipmentDelivery = 11,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2399,6 +3032,9 @@ namespace DigiCMRApi.Service {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private DigiCMRApi.Service.ContactReference CarrierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CarrierLicenseField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
@@ -2412,6 +3048,19 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.CarrierField, value) != true)) {
                     this.CarrierField = value;
                     this.RaisePropertyChanged("Carrier");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CarrierLicense {
+            get {
+                return this.CarrierLicenseField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CarrierLicenseField, value) != true)) {
+                    this.CarrierLicenseField = value;
+                    this.RaisePropertyChanged("CarrierLicense");
                 }
             }
         }
@@ -2444,6 +3093,9 @@ namespace DigiCMRApi.Service {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CountryCodeField;
@@ -2501,6 +3153,19 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.CityField, value) != true)) {
                     this.CityField = value;
                     this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Country {
+            get {
+                return this.CountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
                 }
             }
         }
@@ -2635,7 +3300,13 @@ namespace DigiCMRApi.Service {
         private DigiCMRApi.Service.CollaborationScope CollaborationScopeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContactNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailAddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -2674,6 +3345,19 @@ namespace DigiCMRApi.Service {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ContactName {
+            get {
+                return this.ContactNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContactNameField, value) != true)) {
+                    this.ContactNameField = value;
+                    this.RaisePropertyChanged("ContactName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string EmailAddress {
             get {
                 return this.EmailAddressField;
@@ -2682,6 +3366,144 @@ namespace DigiCMRApi.Service {
                 if ((object.ReferenceEquals(this.EmailAddressField, value) != true)) {
                     this.EmailAddressField = value;
                     this.RaisePropertyChanged("EmailAddress");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ContactSummary", Namespace="https://www.pionira.be/api/v2")]
+    [System.SerializableAttribute()]
+    public partial class ContactSummary : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailAddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FaxNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<long> IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MobileNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TelephoneNumberField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string EmailAddress {
+            get {
+                return this.EmailAddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailAddressField, value) != true)) {
+                    this.EmailAddressField = value;
+                    this.RaisePropertyChanged("EmailAddress");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string FaxNumber {
+            get {
+                return this.FaxNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FaxNumberField, value) != true)) {
+                    this.FaxNumberField = value;
+                    this.RaisePropertyChanged("FaxNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Nullable<long> Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string MobileNumber {
+            get {
+                return this.MobileNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MobileNumberField, value) != true)) {
+                    this.MobileNumberField = value;
+                    this.RaisePropertyChanged("MobileNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string TelephoneNumber {
+            get {
+                return this.TelephoneNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TelephoneNumberField, value) != true)) {
+                    this.TelephoneNumberField = value;
+                    this.RaisePropertyChanged("TelephoneNumber");
                 }
             }
         }
@@ -2710,6 +3532,87 @@ namespace DigiCMRApi.Service {
         Organisation = 2,
     }
     
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CreationState", Namespace="http://schemas.datacontract.org/2004/07/Xynaps.Api.Models")]
+    public enum CreationState : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        None = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Pickup = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Delivery = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        TransferPickup = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        TransferDelivery = 4,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WasteProductInformation", Namespace="https://www.pionira.be/api/v2")]
+    [System.SerializableAttribute()]
+    public partial class WasteProductInformation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<string, string> ExternalAttributesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProcessingNatureField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Collections.Generic.Dictionary<string, string> ExternalAttributes {
+            get {
+                return this.ExternalAttributesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExternalAttributesField, value) != true)) {
+                    this.ExternalAttributesField = value;
+                    this.RaisePropertyChanged("ExternalAttributes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string ProcessingNature {
+            get {
+                return this.ProcessingNatureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProcessingNatureField, value) != true)) {
+                    this.ProcessingNatureField = value;
+                    this.RaisePropertyChanged("ProcessingNature");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Package", Namespace="https://www.pionira.be/api/v2")]
@@ -2726,7 +3629,19 @@ namespace DigiCMRApi.Service {
         private string DescriptionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<string, string> ExternalAttributesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.Measurement GrossWeightField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.Package[] PackagingDetailsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.ProductState ProductStateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> QuantityField;
@@ -2770,6 +3685,32 @@ namespace DigiCMRApi.Service {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Collections.Generic.Dictionary<string, string> ExternalAttributes {
+            get {
+                return this.ExternalAttributesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExternalAttributesField, value) != true)) {
+                    this.ExternalAttributesField = value;
+                    this.RaisePropertyChanged("ExternalAttributes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.Measurement GrossWeight {
+            get {
+                return this.GrossWeightField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GrossWeightField, value) != true)) {
+                    this.GrossWeightField = value;
+                    this.RaisePropertyChanged("GrossWeight");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Id {
             get {
@@ -2779,6 +3720,32 @@ namespace DigiCMRApi.Service {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.Package[] PackagingDetails {
+            get {
+                return this.PackagingDetailsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PackagingDetailsField, value) != true)) {
+                    this.PackagingDetailsField = value;
+                    this.RaisePropertyChanged("PackagingDetails");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public DigiCMRApi.Service.ProductState ProductState {
+            get {
+                return this.ProductStateField;
+            }
+            set {
+                if ((this.ProductStateField.Equals(value) != true)) {
+                    this.ProductStateField = value;
+                    this.RaisePropertyChanged("ProductState");
                 }
             }
         }
@@ -2820,17 +3787,332 @@ namespace DigiCMRApi.Service {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CreationState", Namespace="http://schemas.datacontract.org/2004/07/Xynaps.Api.Models")]
-    public enum CreationState : int {
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProductState", Namespace="http://schemas.datacontract.org/2004/07/Xynaps.Api.Models")]
+    public enum ProductState : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
         None = 0,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Pickup = 1,
+        Loaded = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Delivery = 2,
+        Delivered = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Refused = 3,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Returned = 4,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Measurement", Namespace="https://www.pionira.be/api/v2")]
+    [System.SerializableAttribute()]
+    public partial class Measurement : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UnitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> ValueField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Unit {
+            get {
+                return this.UnitField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UnitField, value) != true)) {
+                    this.UnitField = value;
+                    this.RaisePropertyChanged("Unit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Nullable<decimal> Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Entity", Namespace="https://www.pionira.be/api/v2")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(DigiCMRApi.Service.TransportEquipment))]
+    public partial class Entity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AssociationTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DigiCMRApi.Service.ExternalIdentifier[] ExternalIdsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string AssociationType {
+            get {
+                return this.AssociationTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AssociationTypeField, value) != true)) {
+                    this.AssociationTypeField = value;
+                    this.RaisePropertyChanged("AssociationType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public DigiCMRApi.Service.ExternalIdentifier[] ExternalIds {
+            get {
+                return this.ExternalIdsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExternalIdsField, value) != true)) {
+                    this.ExternalIdsField = value;
+                    this.RaisePropertyChanged("ExternalIds");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdField, value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ExternalIdentifier", Namespace="https://www.pionira.be/api/v2")]
+    [System.SerializableAttribute()]
+    public partial class ExternalIdentifier : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SchemeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UriField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ValueField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Scheme {
+            get {
+                return this.SchemeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SchemeField, value) != true)) {
+                    this.SchemeField = value;
+                    this.RaisePropertyChanged("Scheme");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Uri {
+            get {
+                return this.UriField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UriField, value) != true)) {
+                    this.UriField = value;
+                    this.RaisePropertyChanged("Uri");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ValueField, value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Seal", Namespace="https://www.pionira.be/api/v2")]
+    [System.SerializableAttribute()]
+    public partial class Seal : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ConditionCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SealPartyRoleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ValueField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string ConditionCode {
+            get {
+                return this.ConditionCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ConditionCodeField, value) != true)) {
+                    this.ConditionCodeField = value;
+                    this.RaisePropertyChanged("ConditionCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string SealPartyRole {
+            get {
+                return this.SealPartyRoleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SealPartyRoleField, value) != true)) {
+                    this.SealPartyRoleField = value;
+                    this.RaisePropertyChanged("SealPartyRole");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ValueField, value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3443,6 +4725,22 @@ namespace DigiCMRApi.Service {
             "ponse")]
         System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocumentReturnState> IssueTransportDocumentAsync(long id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="https://www.pionira.be/api/v2/ITransportDocumentService/ArchiveTransportDocument", ReplyAction="https://www.pionira.be/api/v2/ITransportDocumentService/ArchiveTransportDocumentR" +
+            "esponse")]
+        DigiCMRApi.Service.TransportDocumentReturnState ArchiveTransportDocument(long id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://www.pionira.be/api/v2/ITransportDocumentService/ArchiveTransportDocument", ReplyAction="https://www.pionira.be/api/v2/ITransportDocumentService/ArchiveTransportDocumentR" +
+            "esponse")]
+        System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocumentReturnState> ArchiveTransportDocumentAsync(long id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://www.pionira.be/api/v2/ITransportDocumentService/CancelTransportDocument", ReplyAction="https://www.pionira.be/api/v2/ITransportDocumentService/CancelTransportDocumentRe" +
+            "sponse")]
+        DigiCMRApi.Service.TransportDocumentReturnState CancelTransportDocument(long id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://www.pionira.be/api/v2/ITransportDocumentService/CancelTransportDocument", ReplyAction="https://www.pionira.be/api/v2/ITransportDocumentService/CancelTransportDocumentRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocumentReturnState> CancelTransportDocumentAsync(long id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="https://www.pionira.be/api/v2/ITransportDocumentService/PrintTransportDocument", ReplyAction="https://www.pionira.be/api/v2/ITransportDocumentService/PrintTransportDocumentRes" +
             "ponse")]
         DigiCMRApi.Service.TransportDocumentReturnState PrintTransportDocument(long id, string printerName);
@@ -3458,6 +4756,26 @@ namespace DigiCMRApi.Service {
         [System.ServiceModel.OperationContractAttribute(Action="https://www.pionira.be/api/v2/ITransportDocumentService/UpdateTransportDocument", ReplyAction="https://www.pionira.be/api/v2/ITransportDocumentService/UpdateTransportDocumentRe" +
             "sponse")]
         System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocumentReturnState> UpdateTransportDocumentAsync(DigiCMRApi.Service.TransportDocument document);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDoc" +
+            "umentExternalId", ReplyAction="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDoc" +
+            "umentExternalIdResponse")]
+        DigiCMRApi.Service.TransportDocument DeleteGoodsByTransportDocumentExternalId(string externalId, long[] goodsIds, string[] goodsExternalIds);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDoc" +
+            "umentExternalId", ReplyAction="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDoc" +
+            "umentExternalIdResponse")]
+        System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocument> DeleteGoodsByTransportDocumentExternalIdAsync(string externalId, long[] goodsIds, string[] goodsExternalIds);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDoc" +
+            "umentId", ReplyAction="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDoc" +
+            "umentIdResponse")]
+        DigiCMRApi.Service.TransportDocument DeleteGoodsByTransportDocumentId(long id, long[] goodsIds, string[] goodsExternalIds);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDoc" +
+            "umentId", ReplyAction="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDoc" +
+            "umentIdResponse")]
+        System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocument> DeleteGoodsByTransportDocumentIdAsync(long id, long[] goodsIds, string[] goodsExternalIds);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -3599,6 +4917,22 @@ namespace DigiCMRApi.Service {
             return base.Channel.IssueTransportDocumentAsync(id);
         }
         
+        public DigiCMRApi.Service.TransportDocumentReturnState ArchiveTransportDocument(long id) {
+            return base.Channel.ArchiveTransportDocument(id);
+        }
+        
+        public System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocumentReturnState> ArchiveTransportDocumentAsync(long id) {
+            return base.Channel.ArchiveTransportDocumentAsync(id);
+        }
+        
+        public DigiCMRApi.Service.TransportDocumentReturnState CancelTransportDocument(long id) {
+            return base.Channel.CancelTransportDocument(id);
+        }
+        
+        public System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocumentReturnState> CancelTransportDocumentAsync(long id) {
+            return base.Channel.CancelTransportDocumentAsync(id);
+        }
+        
         public DigiCMRApi.Service.TransportDocumentReturnState PrintTransportDocument(long id, string printerName) {
             return base.Channel.PrintTransportDocument(id, printerName);
         }
@@ -3613,6 +4947,22 @@ namespace DigiCMRApi.Service {
         
         public System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocumentReturnState> UpdateTransportDocumentAsync(DigiCMRApi.Service.TransportDocument document) {
             return base.Channel.UpdateTransportDocumentAsync(document);
+        }
+        
+        public DigiCMRApi.Service.TransportDocument DeleteGoodsByTransportDocumentExternalId(string externalId, long[] goodsIds, string[] goodsExternalIds) {
+            return base.Channel.DeleteGoodsByTransportDocumentExternalId(externalId, goodsIds, goodsExternalIds);
+        }
+        
+        public System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocument> DeleteGoodsByTransportDocumentExternalIdAsync(string externalId, long[] goodsIds, string[] goodsExternalIds) {
+            return base.Channel.DeleteGoodsByTransportDocumentExternalIdAsync(externalId, goodsIds, goodsExternalIds);
+        }
+        
+        public DigiCMRApi.Service.TransportDocument DeleteGoodsByTransportDocumentId(long id, long[] goodsIds, string[] goodsExternalIds) {
+            return base.Channel.DeleteGoodsByTransportDocumentId(id, goodsIds, goodsExternalIds);
+        }
+        
+        public System.Threading.Tasks.Task<DigiCMRApi.Service.TransportDocument> DeleteGoodsByTransportDocumentIdAsync(long id, long[] goodsIds, string[] goodsExternalIds) {
+            return base.Channel.DeleteGoodsByTransportDocumentIdAsync(id, goodsIds, goodsExternalIds);
         }
     }
 }

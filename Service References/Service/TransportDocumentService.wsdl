@@ -210,6 +210,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ArchiveTransportDocument">
+      <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/ArchiveTransportDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTransportDocument">
+      <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/CancelTransportDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="PrintTransportDocument">
       <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/PrintTransportDocument" style="document" />
       <wsdl:input>
@@ -221,6 +239,24 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateTransportDocument">
       <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/UpdateTransportDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGoodsByTransportDocumentExternalId">
+      <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDocumentExternalId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGoodsByTransportDocumentId">
+      <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDocumentId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -358,6 +394,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ArchiveTransportDocument">
+      <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/ArchiveTransportDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTransportDocument">
+      <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/CancelTransportDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="PrintTransportDocument">
       <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/PrintTransportDocument" style="document" />
       <wsdl:input>
@@ -369,6 +423,24 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateTransportDocument">
       <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/UpdateTransportDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGoodsByTransportDocumentExternalId">
+      <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDocumentExternalId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGoodsByTransportDocumentId">
+      <soap:operation soapAction="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDocumentId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

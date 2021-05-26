@@ -92,6 +92,18 @@
   <wsdl:message name="ITransportDocumentService_IssueTransportDocument_OutputMessage">
     <wsdl:part name="parameters" element="tns:IssueTransportDocumentResponse" />
   </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_ArchiveTransportDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ArchiveTransportDocument" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_ArchiveTransportDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ArchiveTransportDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_CancelTransportDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTransportDocument" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_CancelTransportDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelTransportDocumentResponse" />
+  </wsdl:message>
   <wsdl:message name="ITransportDocumentService_PrintTransportDocument_InputMessage">
     <wsdl:part name="parameters" element="tns:PrintTransportDocument" />
   </wsdl:message>
@@ -103,6 +115,18 @@
   </wsdl:message>
   <wsdl:message name="ITransportDocumentService_UpdateTransportDocument_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateTransportDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_DeleteGoodsByTransportDocumentExternalId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGoodsByTransportDocumentExternalId" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_DeleteGoodsByTransportDocumentExternalId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGoodsByTransportDocumentExternalIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_DeleteGoodsByTransportDocumentId_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGoodsByTransportDocumentId" />
+  </wsdl:message>
+  <wsdl:message name="ITransportDocumentService_DeleteGoodsByTransportDocumentId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGoodsByTransportDocumentIdResponse" />
   </wsdl:message>
   <wsdl:portType name="ITransportDocumentService">
     <wsdl:operation name="CreateTransportDocument">
@@ -161,6 +185,14 @@
       <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/IssueTransportDocument" message="tns:ITransportDocumentService_IssueTransportDocument_InputMessage" />
       <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/IssueTransportDocumentResponse" message="tns:ITransportDocumentService_IssueTransportDocument_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="ArchiveTransportDocument">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/ArchiveTransportDocument" message="tns:ITransportDocumentService_ArchiveTransportDocument_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/ArchiveTransportDocumentResponse" message="tns:ITransportDocumentService_ArchiveTransportDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelTransportDocument">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/CancelTransportDocument" message="tns:ITransportDocumentService_CancelTransportDocument_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/CancelTransportDocumentResponse" message="tns:ITransportDocumentService_CancelTransportDocument_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="PrintTransportDocument">
       <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/PrintTransportDocument" message="tns:ITransportDocumentService_PrintTransportDocument_InputMessage" />
       <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/PrintTransportDocumentResponse" message="tns:ITransportDocumentService_PrintTransportDocument_OutputMessage" />
@@ -168,6 +200,14 @@
     <wsdl:operation name="UpdateTransportDocument">
       <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/UpdateTransportDocument" message="tns:ITransportDocumentService_UpdateTransportDocument_InputMessage" />
       <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/UpdateTransportDocumentResponse" message="tns:ITransportDocumentService_UpdateTransportDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGoodsByTransportDocumentExternalId">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDocumentExternalId" message="tns:ITransportDocumentService_DeleteGoodsByTransportDocumentExternalId_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDocumentExternalIdResponse" message="tns:ITransportDocumentService_DeleteGoodsByTransportDocumentExternalId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGoodsByTransportDocumentId">
+      <wsdl:input wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDocumentId" message="tns:ITransportDocumentService_DeleteGoodsByTransportDocumentId_InputMessage" />
+      <wsdl:output wsaw:Action="https://www.pionira.be/api/v2/ITransportDocumentService/DeleteGoodsByTransportDocumentIdResponse" message="tns:ITransportDocumentService_DeleteGoodsByTransportDocumentId_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>
